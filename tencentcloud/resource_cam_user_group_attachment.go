@@ -128,7 +128,7 @@ func (r *camUserGroupAttachmentResource) Read(ctx context.Context, req resource.
 	err := backoff.Retry(readUserForGroup, reconnectBackoff)
 	if err != nil {
 		resp.Diagnostics.AddError(
-			"[API ERROR] Failed to Add User to Group",
+			"[API ERROR] Failed to List User For Group",
 			err.Error(),
 		)
 		return
